@@ -1,0 +1,207 @@
+@font-face {
+    font-family: '3dumbregular';
+    src: url(fontss/3dumb-webfont.woff2) format('woff2'),
+         url(fontss/3dumb-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+  *:focus {
+    transition: 100ms;
+    
+}
+
+body {
+    flex-wrap: wrap;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.leftsection {
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex: 3;
+}
+
+.rightsection {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+}
+.lefttop {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.logo {
+    background-color: hsla(0, 0%, 94%, 0.75);
+    box-sizing: border-box;
+    display: flex;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    font-size: clamp(16px, 7vw, 80px);
+    column-gap: 20px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-family: '3dumbregular';
+}
+
+.logo-img {
+    width: 17%;
+    height: auto;
+}
+
+.righttop {
+    padding: 10px 15px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    justify-content: end;
+    color: (33, 141, 181);
+    box-sizing: border-box;
+}
+
+input {
+    border-radius: 6px;
+    width: 250px;
+    height: 1.5rem;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+label {
+    color: rgb(11, 43, 54);
+    font-weight: 300;
+    display: block;
+}
+
+.line {
+    display: flex;
+    column-gap: 75px;
+    row-gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+p {
+    margin: 10px 0;
+    color: rgb(9, 51, 66);
+    font-size: clamp(16px, 3vh, 24px);
+    max-width: 900px;
+    font-weight: 700;
+}
+
+.inputs {
+    box-shadow: 0px 5px 10px 1px rgba(91, 94, 95, 0.8);;
+    padding: 10px 15px 20px 40px;
+    background-color: rgb(232, 232, 232); 
+    position: relative;
+}
+
+button {
+    appearance: none;
+    color: rgb(241, 248, 255);
+    background-color: rgb(33, 141, 181);
+    width: 260px;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 8px;
+    margin: 40px 10px 15px 40px;
+    padding: 10px 30px;
+    box-shadow: 0px 5px 10px 1px rgba(91, 94, 95, 0.8);;
+    
+}
+
+.plow {
+    font-weight: 300;
+    font-size: 16px;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+
+.topline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 590px;
+    align-items: baseline;
+    column-gap: 200px;
+    padding: 20px 0;
+}
+
+#pmid {
+    font-weight: 300;
+    color: rgb(33, 136, 173);
+    font-size: clamp(16px, 3vh, 24px);
+    max-width: 900px;
+}
+
+a {
+    appearance: none;
+    color:rgb(42, 61, 79);
+    font-weight: 700;
+}
+
+
+input:focus {
+    border: 2px solid rgb(34, 104, 154);
+    box-shadow: 2px 2px 2px 1px rgb(33, 141, 181);
+    outline: white;
+}
+
+input.error:invalid {
+    border: 2px solid rgb(213, 34, 34);
+}
+
+
+input:valid:not(:placeholder-shown):not(:focus) {
+    border: 2px solid rgb(37, 170, 123);
+}
+
+input:invalid:not(:placeholder-shown):not(:focus) {
+    border: 2px solid rgb(213, 34, 34);
+}
+
+
+input[type='email']:invalid:not(:placeholder-shown):not(:focus) + span::after,
+input[type='tel']:invalid:not(:placeholder-shown):not(:focus) + span::after,
+input[id="pass3"]:invalid:not(:placeholder-shown):not(:focus) + span::after {
+    content: 'Incorrect format';
+    font-size: 1rem;
+    color: rgb(213, 34, 34);
+    position: absolute;
+    left:0;
+    top:3.7rem;
+}
+
+
+.email, .tel, .pass1, .pass2 {
+    position: relative;
+}
+
+#err {
+    visibility: hidden;
+    color: rgb(213, 34, 34);
+    min-height: 2rem;
+    
+}
+
+input[id="pass4"]:invalid:not(:placeholder-shown):not(:focus) + span::after {
+    content: 'Passwords don\'t match';
+    font-size: 1rem;
+    color: rgb(213, 34, 34);
+    position: absolute;
+    left:0;
+    top:3.7rem;
+}

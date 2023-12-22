@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class = 'leftsection'>
+    <div class="lefttop">
+        <div class = 'logo'>
+            <img src="odin-lined copy.png" alt="odin logo" height=100px class="logo-img">
+            ODIN
+        </div>
+    </div>
+</div>
+<div class = 'rightsection'>
+    <div class = 'righttop'>
+        <p>
+            This is not a real online service! You know you need something like this in your life
+            to help you realize your deepest dreams. Sign up <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+    </div>
+<div class="rightmid">
+    
+    <form action="" method="get">
+        
+        <div class = 'inputs'>
+            <div class ='topline'>
+                <span id="pmid">Let's do this!</span>
+                <span style="font-size: 14px; font-weight: 300; margin-top: 1rem;">*Required fields</span>
+            </div>
+            <div class="line">
+                <div>
+                    <label for="firstname">FIRST NAME*</label>
+                    <input type="text" id="firstname" name="form" required placeholder="Arthur">
+                </div>
+                <div>
+                    <label for="secondname">SECOND NAME*</label>
+                    <input type="text" id="secondname" name="form" required placeholder="Morgan">
+                </div>
+            </div>
+            <div class="line">
+                <div class="email">
+                    <label for="email">EMAIL*</label>
+                    <input type="email" id="email" name="form" required placeholder="email@site.com">
+                    <span></span>
+                </div>
+                <div class="tel">
+                    <label for="tel">PHONE NUMBER</label>
+                    <input type="tel" id="tel" name="form" pattern="[0-9]+" title="Only numbers allowed" placeholder="999999999" minlength="9">
+                    <span></span>
+                </div>
+            </div>
+            <div class="line">
+                <div class = 'pass1'>
+                    <label for="pass3">PASSWORD*</label>
+                    <input type="password" id="pass3" name="form" placeholder="Strong!Password0" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                    <span></span>
+                </div>
+                <div class = 'pass2'>
+                    <label for="pass4">CONFIRM PASSWORD*</label>
+                    <input type="password" id="pass4" name="form" required placeholder="Strong!Password0" >
+                    <span></span>
+                </div>
+            </div>
+            <div id="err" style="margin-top: 1.5rem; max-width: 590px;">Password should be at least 8 characters long and 
+                include: 1 uppercase character, 1 number, 1 special character
+            </div>
+            
+        </div>
+        <button type="submit">Create Account</button>
+    </form>
+    <p class="plow">Already have an account? <a href="">Log in</a></p>
+</div>
+</div>   
+</body>
+</html>
